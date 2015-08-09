@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://cdn.foundation5.zurb.com/foundation.css" rel="stylesheet"></link>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <style>
+  body {
+    margin: 10px;
+  }
+
+  #flash {
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <div id="tuits">
+  {{> tuits}}
+  </div>
+
+  <span id="flash" class="label"></span>
+  <form id="new_tuit">
+    <div>
+      <label>User:</label>
+      <input id="user" type="text"/>
+    </div>
+    <div>
+      <label>Text:</label>
+      <textarea id="body"></textarea>
+    </div>
+  </form>
+  <button id="send" type="button" class="button round">Send</button>
+</body>
+
+<script src='./client.js'></script>
+</html>

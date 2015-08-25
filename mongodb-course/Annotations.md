@@ -70,3 +70,50 @@ the database's data files. This files could be larger but this operation is vast
 * Remove keeps meta data (like indexes), drop doesn't.
 * Remove is not atomic.
 * Remove by default deletes all documents that match the query (opposite to update).
+
+## Chapter 3: Schema design
+
+* In MongoDB you organize your data to specifically match your app data access pattern. This is known as 
+application-driven schema. Best performance and easy to use by your app.
+* MongoDB supports rich documents (array, documents, etc) but it doesn't support joins, nor constraints.
+* There is no declared schema, but your app will probably have one (every single doc in a collection is going to 
+have a pretty similar structure).
+* Goals of relational normalization:
+  1. Free the database of modification anomalies (avoid inconsistent data)
+  2. Minimize redesing when extending
+  3. Avoid any bias toward any particular access pattern
+* On the contrary, MongoDB tries to tune the app you are going to write and the problem your are going to solve.
+* A rule of thumb with MongoDB is that if you find yourself doing the same than in relational design, you probably 
+are not taking the best approach.
+* In MongoDB there are no foreign key constraints, so it's up to you as developer to guarantee data consistency if 
+you use that approach. However, embedding solves this problem.
+* Atomic operations mean that all the work done over a single document will be completed before anyone else can sees 
+the document. All the changes or none of them.
+* In order to live without transactions you can:
+  1. Restructure your code to use one single document and take advantage of atomic operations.
+  2. Implement some sort of locking in software (critical sections, semaphores, etc).
+  3. Tolerate a little bit of inconsistency.
+* $update, $findAndModify, $addToSet and $push are all atomic operations within a single document.
+* The decision of to embed or not to embed depends on how you access the data and how frequently you do it. Some 
+considerations to embed:
+  * Frequency of access: Whether of not the data is accessed in the same frequency
+  * Size of items: Whether the items grow or not grow (working set size of the application). The combined size of 
+  the documents could be larger than 16MB
+  * Atomicity of data: Whether or not you need to guarantee that everything is updated at the same time
+  * Existence: if one of the items could exist without the other
+* For one-to-many relations link from the many to one using an id (unique). You should use multiple collections 
+when the many is large and it's up to you guarantee the data consistency.
+* For one-to-few relations you can embed.
+* For many-to-many (when it's actually few-to-few) you can link using arrays. It's NOT recommended to link in both 
+directions because it creates an opportunity to have data inconsistency.
+* The main benefit of embedding is performance. And the key performance benefits are:
+  * Improved read performance (high latency vs high bandwith)
+  * One round trip to the database
+* One caveat of embedding is that if the document is moved a lot then you can slow down your write because the 
+amount of information.
+* Trees can be represented storing the ancestors information (using the rich document feature of MongoDB).
+* When to denormalize (without duplicating data):
+  * For one-to-one is always safe
+  * For one-to-many embed from the many to the one
+  * For many-to-many link through arrays
+* To handle blobs (or big files) use gridfs.

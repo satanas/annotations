@@ -117,3 +117,100 @@ amount of information.
   * For one-to-many embed from the many to the one
   * For many-to-many link through arrays
 * To handle blobs (or big files) use gridfs.
+
+
+## Chapter 4: Performance
+
+* The storage engine is the interface between the persistence storage (disk) and the database. It affects the data 
+file format and the format of indexes
+* MMAPv1 works mapping a physical file into memory according the physical memory of the box. If the part of the file 
+searched is not in memory then it has to read it from the disk and put it into memory before you can use it. The 
+algorithm that decides what's in memory and what's in disk is part of the OS, so the engine can't do anything to 
+optimize it.
+* MMAPv1 offers:
+  * Collection Level Locking (or Concurrency): Each collection is its own file. Multiple readers, single writer lock. 
+  So only one write operation can happen at a time in the same collection.
+  * In Place Updates: It tries to update the document in the same page. If the document is bigger than the page, 
+  it's moved to another page with more space. Allocation is done using power of two sizes
+* WiredTiger (is not turned on by default, you must run it with --storageEngine wiredTiger) offers:
+  * Document Level Concurrency: It's a lock free implementation that has an optimistic concurrency model, the 
+  storage asumes that two writes are not in the same document, and if they are, one of them is unwound and has to 
+  try again.
+  * Compression of documents (data) and indexes (on disk).
+  * Append-only storage: There are no in-place updates, wiredTiger mark the document as no longer used and allocates 
+  new space on disk to write it there. Eventually it will clean up the space. This makes that if you want to update a 
+  single attribute of a document, wiredTiger has to save the whole document again (it's often faster)
+* WiredTiger manages the memory that is used to access the file on disk, it decides what goes to memory and what goes 
+to disk
+* An index is an orderer set of things that have some sort of pointer to a physical location. Without indexes, you 
+need to scan every document in the collection (aka table scan in SQL world) when you search for something and this 
+really impacts on performance.
+* All indexes entries will be ordered, so you must use a leftmost set of things
+* Indexes come at a cost, they will slow down writes (because of the maintenance cost of the index) but will speed up 
+your reads.
+* You don't want to have indexes for every key in your collections
+* An index in _id exists in all collections and can not be deleted
+* The best way to know what indexes are created is through db.<collection>.getIndexes() in MongoDB shell
+* You can create indexes in arrays using multikey indexes
+* You can not create compound indexes with multikey indexes when both of the keys are arrays (this is to avoid 
+cartesian product of elements inside each array)
+* A regular index becomes a multikey index once we insert a document with one of the attributes as array (no matter 
+the order)
+* The $and operator in arrays doesn't guarantee that all the criteria will match inside the same element, they can 
+match but in different elements. For this kind of comparison we must use $elemMatch
+* When using complex queries, always check the explain
+* Indexes are not unique by default, we must pass {unique: true} in order to create unique indexes
+* Sparse option tells to the database to not include documents with missing a key (rightmost), otherwise we would 
+violate the non-duplicated index
+* Sparse indexes can not be used for sorting, instead the database uses a collection scan. This is because a spare 
+index could miss documents
+* Indexes can be created in foreground or background. Differences:
+  * Foreground: default option, relatively fast, blocks readers and writers in the database
+  * Background: slower, do not block readers and writers, you can create multiple background indexes in parallel
+* Explain is used to know what the database will do with the data but it doesn't bring the data back
+* In 3.0 you can pass find(), update(), etc, to explain but no insert() (there is no much to optimize there)
+* db.example.explain() returns an explainable object and here we can use almost any query
+* Explain modes:
+  * queryPlanner: tells you what the db would use in terms of indexes
+  * executionStats: it returns the execution stats for that query (includes queryPlanner)
+  * allPlansExecution: runs the query optimizer that is run periodically by the database. It returns the execution 
+  stats for all posible plans (incldues executionStats). It won't return all the information because once it realizes 
+  that the query is not optimal it stops.
+* When you see a lot of documents examined and fewer documents returned then the database is doing a lot of extra work
+* It important that all queries have an index but also that all indexes are used by a query, otherwise we are wasting 
+time maintaining them. The best balance is: all queries have an index and all indexes are being used
+* Covered queries are queries that can be satisfied by indexes and 0 documents are inspected
+* To achieve covered queries you probably must to project exactly what attributes you want to return, otherwise 
+MongoDB won't know if it can satisfy the query and has to examine all documents. In other words, the index and the 
+attributes returned by the query must be the same.
+* To choose an index, MongoDB first select the candidates, then runs the query in parallel with each index and 
+selects the fastest. This can be considered by reaching a goal state: returning all results or returning a threshold 
+of results (sorted)
+* MongoDB stores the winning query plan in cache for queries of that shape for future used until: threshold writes, 
+index is rebuild, other indexes are added/deleted or mongod is restarted
+* For performance reasons it's really important that indexes in the working set fit into memory, otherwise we lose 
+the benefits of using indexes going regularly to disk to fetch the data
+* stats() and totalIndexSize() give us information about the size of the indexes
+* Depending on the type of index we will have different index cardinality. For regular indexes we will have 1:1, for 
+sparse indexes <= num of docs and for multikey > num of docs
+* MongoDB lets you create 2D geospatial indexes using '2d' as type of index.
+* Full text search index will index every word in a document to allow you to do queries into the text like using $or 
+operator.
+* $meta: 'textScore' gives you the score of the text searching
+* When designing indexes the goals is to make our read/write operations as efficient as possible. Some considerations 
+to achieve this are:
+  * Selectivity: minimize records scanned
+  * How sorts are handled
+* The primary factor that determines how efficiently an index can be used is the selectivity of the index
+* If we want to support sort in an index, then we must to add the sort after the most selective part and before 
+the ranged part. For example: (class_id, final_grade, student_id) for a 
+find({class_id: 54, student_id: {$gt: 5000}}).sort({'final_grade': 1}). Equality fields, then sort fields and finally 
+range fields
+* If we want to sort on multiple fields, the direction of each field on which we want to sort in a query must be the 
+same than the direction of each field specified in the index
+* MongoDB automatically logs slow queries (>100ms) into the server log
+* Profiler will log slow queries into system.profile
+  * Level 0: off
+  * Level 1: log slow queries
+  * Level 2: log all queries (debug)
+* mongotop lets you know where MongoDB is spending its time

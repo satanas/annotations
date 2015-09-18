@@ -214,3 +214,73 @@ same than the direction of each field specified in the index
   * Level 1: log slow queries
   * Level 2: log all queries (debug)
 * mongotop lets you know where MongoDB is spending its time
+
+## Chapter 5: Aggregation framework
+
+* MongoDB uses a pipeline for its aggregation framework. That pipeline has the following stages:
+  * $project: reshape the document (selecting fields) (1:1)
+  * $match: filter the document (n:1)
+  * $group: aggregate with functions like sum, count, etc (n:1)
+  * $sort: sort the documents (n:1)
+  * $skip: skip a specific number of documents from the result set (n:1)
+  * $limit: limit the output (n:1)
+  * $unwind: normalize the data (for ex: flatting arrays into new documents) (1:n)
+  * $out: handle the output (1:1)
+* Other advanced stages to be check are:
+  * $redact
+  * $geonear
+* The aggregation framework let you group by a single key ($group:{_id: "$manufacturer"}) but also by compounded keys 
+(like $group:{_id: {manufacturer: "$manufacturer", category: "$category"}})
+* In MongoDB, _id also can be a document, not just a scalar value
+* $group can use the following expressions:
+  * $sum: count (passing 1) or sum (passing the value)
+  * $avg: get the average value across the documents
+  * $min: get the minimum value
+  * $max: get the maximum value
+  * $push, $addToSet: push the value to an array
+  * $first, $last: find the first or the last element. These expressions must be used after $sort, otherwise the 
+  values will be arbitrary (or random)
+* An aggregation stage can be applied several times in one single query
+* $project reshapes the result set and you can:
+  * Remove keys
+  * Add new keys
+  * Reshape keys
+  * Use some simple functions ($toUpper, $toLower, $add, $multiply)
+* $project won't include a key if you don't mention it, except for _id, which must be explicitly suppressed
+* A key equals to 1, ```key: 1```, in $project will copy the key with the exact value in the source document
+* A projection will indicate which fields must be added to the result set but it doesn't retain the order of those fields
+* $match can be used for two things:
+  * Pre aggregation filter
+  * Filter the results
+* $match (and $sort) can use indexes, but only if they are used at the beginning of the aggregation pipeline
+* When searching in a full text search index, you don't need to specify the field because you can only have one full 
+text index per collection
+* In full text search, you can sort by the weight of the search using meta data: {score: {$meta: "textScore"}}
+* $text operator can only be used if there is a full text search index in the collection
+* $text operator is only allowed in a $match that is the first stage of the aggregation pipeline
+* Aggregation framework supports both, disk and memory based sorting
+* By default, the aggregation framework will try a sort in memory, considering the limit of 100MB for any given 
+pipeline stage
+* $sort can be done before or after the grouping stage
+* It makes no sense to do a skip or limit of the result set if it is not sorted. First skip, then limit, in that 
+order. In ```find```, the database does that automatically but in the aggregation framework doesn't
+* $unwind let you flat the results of an array attribute, creating a new document with all the possible combinations
+of each array value
+* $push is the operator that lets you "reverse" the effects of an unwind
+* Two $push in a row let you reverse a double $unwind
+* $out let you redirect the output of an aggregation query into a new collection. But beware, because $out is 
+destructive, it will overwrite the previous content of the collection (as long as you don't get errors). If you get 
+errors during the $out, the previous collection is not touched (the renaming is done at the very end)
+* In $out, you also must guarantee by yourself that every _id is unique
+* Some of the aggregation options are:
+  * explain: instead of running the aggregation, it will show you the query plan
+  * allowDiskUse: it will allow the use of disk when the 100MB limit is reached (otherwise the aggregation will fail)
+  * cursor: user cursors and cursor sizes
+* In MongoDB 2.4 both, shell and python driver, returned a big document with all the result set but in MongoDB 2.6, 
+the shell returns a cursor and python returns a big document or a cursor.
+* To make python return a cursor, you must pass the {cursor=true} option
+* Limitations of aggregation framework:
+  * 100 MB limit for pipeline stages. Fixed with allowDiskUse: true
+  * 16 MB limit by default in Python. Fixed with cursor={}
+  * When doing group or sort in a sharding system, all the results will be sent to the primary shard to be collected 
+  and processed. This can be mitigated using alternatives as Hadoop

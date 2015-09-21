@@ -284,3 +284,79 @@ the shell returns a cursor and python returns a big document or a cursor.
   * 16 MB limit by default in Python. Fixed with cursor={}
   * When doing group or sort in a sharding system, all the results will be sent to the primary shard to be collected 
   and processed. This can be mitigated using alternatives as Hadoop
+
+## Chapter 6: Application Engineering
+
+* The w value indicates whether the driver has to wait for the write in memory or not and the j value indicates whether 
+the driver has to wait until for the journal write in disk.
+* The default is w=1 and j=false. This config is faster but let you with a small window of vulnerability (if the 
+server crashes and the journal wasn't wrote you lose the data)
+* Other option is w=1 and j=true. This is slower but completely safe. You can also decide to set w=0 but this is NOT 
+recommended and it's called unack write because you don't have response from the driver.
+* Previous setup is known as "write concern"
+* To mitigate network errors you can use insert instead update (especially if the update is not idempotent, like $inc)
+* You need, at minimum, 3 original nodes in order to assure a new primary election when a node goes down
+* Types of replica set nodes:
+  * Regular: Regular node, can become primary and can participate on elections
+  * Arbiter: Just for voting purposes, it doesn't hold any data
+  * Delayed/Regular: Disaster-recovery node. Set to a time behind the primary and can participate on election but can 
+  not be elected as primary
+  * Hidden: used for analytics, etc. Can't become primary but can participate on election
+* During a failover, while a new primary is being elected, you can not write successfully
+* MongoDB supports two types of write consistency:
+  * Strong consistency: Reads are in sync respect to writes because reads and writes are done to the primary
+  * Eventual consistency: Will happen when you write to the primary but read from the secondaries. You may not get the 
+  same data but stale data, however you eventually will
+* MongoDB doesn't let you read form a secondary by default. You have to use rs.slaveOk()
+* Each replica node has an oplog, that is kept in sync by MongoDB, and secondaries are constantly reading the oplog 
+of the primary to sync their data (secondaries can sync from another secondary too, as long as at least there is a 
+chain of oplog syncs that lead back to the primary)
+* The oplog lets you do interesting things like upgrades (running 3.0 and updating against an older secondary, etc)
+* Oplog is a capped collection, so it will get rolled off every certain amount of time. This can be set depending on 
+the data flow and speed
+* Each server knows how far they are respect the primary thanks to the optime and optimedate and where to get their data
+* oplog uses a statement-based approach that is independant from driver and MongoDB version
+* If the server can't get the oplog then it has to read the entire database (this is much slower)
+* On failover, if the oplog of the primary hasn't been replicated, that data will be rolled back when the server 
+comes to the set again (as a secondary). It will be available on a set to apply it manually but it's too complicated 
+most of times. To avoid this, w is set to "majority" to wait for the majority of the nodes have the data
+* There is still a corner case where the data written with w=majority gets rolled back. If a failover occurs after the 
+write has committed to the primary but before replication completes
+* From pymongo, you can connect to a replica set doing nothing because pymongo connects by default to 127.0.0.1:27017 
+and then it discovers all the other nodes. However, it's recommended to specify the whole list of nodes so pymongo 
+knows where to look at if the default node is down
+* The robust way to handling failover on inserts is to try the insert several times (let's say 3), checking for 
+autoreconnect and duplicate key exception
+* Write concern (w) value can be set at client, database or collection level but the client level is the recommended
+* Writes that return errors to the client due to wtimeout may in fact succeed, but writes that return success, do in 
+fact succeed
+* Read preferences are:
+  * Primary: always read from the primary
+  * PrimaryPreferred: read from the primary but look for secondaries if the primary is not available
+  * Secondary: rotate reads between secondaries (never read from primary)
+  * SecondaryPreferred: read from secondaries but look for primary if there are no secondaries available
+  * Nearest: read from the nearest node (<= 15ms)
+* Implications of replication:
+  * Seed lists: drivers need to know at least one member of the replica set
+  * Write concerns (w, j, wtimeout): Understand how the writes work and how much do you have to wait for a write
+  * Read preferences: decide where do you want to read from
+  * Errors can happen: Even though replication exists, error can always happen
+* Sharding is the way to handle scaling out using a range-based or hash-based approach to distribute data across shards
+* For production, it's always recommended to use three servers for configuration
+* For query, you may specify the shard key. If you don't, the query will be performed by all nodes
+* For update, it's illegal to try an update/insert without the shard key because the database wouldn't know where to 
+put that record
+* Implications of sharding:
+  * Every document has to include the shard key
+  * Shard key is immutable
+  * You need an index that starts with the shard key
+  * When updating you have to specify the shard key or multi=true to send the update to all of the
+  * No shard key specified means scatter gather (expensive)
+  * No unique key unless is part of the shard key because there is no collective way for the database to determine the 
+  uniqueness of that index
+* Write concerns (w, j, wtimeout) applies in the same way for sharding environments
+* To choose a shard key you must consider:
+  * Sufficient cardinality means sufficient variety of values
+  * Avoid shard keys that increase monotonically (like _ids) because this creates hotspots and unbalance the shard
+  * A key that gives you high parallelism is a good choice for shard key
+* You can't choose an array as shard key because it needs a multi key index

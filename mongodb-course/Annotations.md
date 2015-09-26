@@ -2,6 +2,9 @@
 
 ## Chapter 1: Introduction
 
+*Summary*: Introduction & Overview - Overview, Design Goals, the Mongo Shell, JSON Intro, installing tools, overview 
+of blog project. Bottle, Pymongo
+
 * MongoDB is a document oriented database (also known as non-relational database).
 * By design, it doesn't support joins neither transactions. This decision was made to try to get a
 fully scalable but still functional database.
@@ -15,7 +18,8 @@ of MongoDB
 
 ## Chapter 2: CRUD
 
-CRUD = IFUR = ISUD
+*Summary*: CRUD (Creating, Reading and Updating Data) - Mongo shell, query operators, update operators and a few 
+commands. CRUD = IFUR = ISUD
 
 * MongoDB uses no special language to query, just methods/functions in programming language APIs.
 * MongoDB shell is based on javascript.
@@ -73,6 +77,8 @@ the database's data files. This files could be larger but this operation is vast
 
 ## Chapter 3: Schema design
 
+*Summary*: Schema Design - Patterns, case studies and tradeoffs
+
 * In MongoDB you organize your data to specifically match your app data access pattern. This is known as 
 application-driven schema. Best performance and easy to use by your app.
 * MongoDB supports rich documents (array, documents, etc) but it doesn't support joins, nor constraints.
@@ -120,6 +126,8 @@ amount of information.
 
 
 ## Chapter 4: Performance
+
+*Summary*: Using indexes, monitoring and understanding performance. Performance in sharded environments.
 
 * The storage engine is the interface between the persistence storage (disk) and the database. It affects the data 
 file format and the format of indexes
@@ -217,6 +225,8 @@ same than the direction of each field specified in the index
 
 ## Chapter 5: Aggregation framework
 
+*Summary*: Goals, the use of the pipeline, comparison with SQL facilities.
+
 * MongoDB uses a pipeline for its aggregation framework. That pipeline has the following stages:
   * $project: reshape the document (selecting fields) (1:1)
   * $match: filter the document (n:1)
@@ -286,6 +296,8 @@ the shell returns a cursor and python returns a big document or a cursor.
   and processed. This can be mitigated using alternatives as Hadoop
 
 ## Chapter 6: Application Engineering
+
+*Summary*: Drivers, impact of replication and Sharding on design and development.
 
 * The w value indicates whether the driver has to wait for the write in memory or not and the j value indicates whether 
 the driver has to wait until for the journal write in disk.

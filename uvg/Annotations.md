@@ -36,4 +36,4 @@ Juul argues that games can be analyzed in terms of two basic game structures: em
  * Particular forms of play in emergent games
   1. Griefing: is the act of intentionally disrupt or harass other player outside of the assumed gameplay interactions
   2. Speed Run: consist in complete the game or levels of the game as fast as possible at the expense of other things. 
-  It requires deep familiarity with game mechanics, expert route planning and glitch explotaition
+  It requires deep familiarity with game mechanics, expert route planning and glitch exploitation

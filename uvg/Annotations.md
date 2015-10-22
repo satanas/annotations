@@ -39,18 +39,26 @@ Juul argues that games can be analyzed in terms of two basic game structures: em
   It requires deep familiarity with game mechanics, expert route planning and glitch exploitation
 
 ## Lesson 4: Game Mechanics
-a lesson that deals with the concept of the game mechanic. This term is crucial to game studies as it describes, in part, the manner in which the player interacts with the game
 
-*Arcade games should be simple to let the player jump right into the game and challenging enough to keep the player plumping in coins
-*Arcade mechanics were designed to last about only 2 and a half minutes.
-*Game mechanics need to be interesting and memorable to run on the old hardware
-*According Ebert, games can not be art because they depend on interactivity from the user
-* Game mechanics change the game state and the game state is the particular position and characteristics of all objects and environment in a particular moment of time
-*Ebert believes that traditional expressive forms like paintings, novels, and films are inherently different from games. He believed that interactivity makes games inherently inferior to paintings, novels and film. Interactivity hands control of the experience and story over to the audience
-* Sicart draws a parallel between object oriented programming and describing game elements. This is a useful metaphor for those who understand some of the fundamental concepts of programming
+A lesson that deals with the concept of the game mechanic. This term is crucial to game studies as it describes, in 
+part, the manner in which the player interacts with the game.
+
+* Arcade games should be simple to let the player jump right into the game and challenging enough to keep the player 
+plumping in coin
+* Arcade mechanics were designed to last about only 2 and a half minutes.
+* Game mechanics need to be interesting and memorable to run on the old hardware
+* According Ebert, games can not be art because they depend on interactivity from the user
+* Game mechanics change the game state and the game state is the particular position and characteristics of all objects 
+and environment in a particular moment of time
+* Ebert believes that traditional expressive forms like paintings, novels, and films are inherently different from games. 
+He believed that interactivity makes games inherently inferior to paintings, novels and film. Interactivity hands control 
+of the experience and story over to the audience
+* Sicart draws a parallel between object oriented programming and describing game elements. This is a useful metaphor 
+for those who understand some of the fundamental concepts of programming
 * Sicart believes that game mechanics are best described as verbs
 
-Avedon has develoed a framework with ten structural elements to understand game interaction (what the game is a how it's played):
+Avedon has develoed a framework with ten structural elements to understand game interaction (what the game is a how 
+it's played):
 1. Purpose of the game
 2. Procedure of action (how the player achieve the interaction, related to the controls)
 3. Rules governing action
@@ -67,29 +75,37 @@ Avedon has develoed a framework with ten structural elements to understand game 
 * According Miguel Sicart, game mechanics are methods invoked by agents, designed for interaction with the game world
 * Agency means that something you do have and effect on something else
 
-Game Grammar
-============
-According Raph Koster, the game is a black box and the player goals is to figure out the rules hidden in the box
+### Game Grammar
 
-MDA
-====
-Tries to find a balance between the game designer and the player and three things mediate the designer-player relationship: Mechanics, Dynamics and Aesthetics. Dynamics involves how the pace and the goals of the game change over time, aesthetics are more how the player feel an emotional level. Mechanics are the various actions, behaviors and control mechanisms afforded to the player in the game context.
+According Raph Koster, the game is a black box and the player goals is to figure out the rules hidden in the box.
 
-* If a play testing said that your game is boring (aesthetics), you need to change the game dynamics and to achieve that you could introduce a new mechanics to the game.
-* According Jesse Schell, interactions and relationships that remain when all of the aesthetics, technology and story are stripped away
+### MDA
+
+Tries to find a balance between the game designer and the player and three things mediate the designer-player 
+relationship: Mechanics, Dynamics and Aesthetics. Dynamics involves how the pace and the goals of the game change over 
+time, aesthetics are more how the player feel an emotional level. Mechanics are the various actions, behaviors and 
+control mechanisms afforded to the player in the game context.
+
+* If a play testing said that your game is boring (aesthetics), you need to change the game dynamics and to achieve 
+that you could introduce a new mechanics to the game.
+* According Jesse Schell, interactions and relationships that remain when all of the aesthetics, technology and story 
+are stripped away
 * Functional space describes the meaningful positions that game objects can be in
 * Chance mechanics are those that use some degree of probability
 
-And finally, we look at Jesse Schell’s framework for understanding games, which is a very structuralist approach to games. He starts by saying that game mechanics are the “interactions and relationships that remain when all of the aesthetics, technology, and story are stripped away.”
+And finally, we look at Jesse Schell’s framework for understanding games, which is a very structuralist approach to 
+games. He starts by saying that game mechanics are the "interactions and relationships that remain when all of the 
+aesthetics, technology and story are stripped away".
 
-Narrative Mechanics
-================
-Koster says that narrative in a game is not a game mechanics else a form of feedback but this is pretty dramatic. Cutscenes are feedback as reward to the player for understanding game mechanics
+### Narrative Mechanics
 
-*Emergent narrative is created through the game, like rogue-like games. The entire history emerges from randomly generated elements and the player choices.
+Koster says that narrative in a game is not a game mechanics but a form of feedback, however this is pretty dramatic. 
+Cutscenes are feedback as reward to the player for understanding game mechanics.
+
+* Emergent narrative is created through the game, like rogue-like games. The entire history emerges from randomly 
+generated elements and the player choices
 * Game mechanics are really effective delivering game narrative, you can shape narrative elements through mechanics
 * Extra Creditz about Narrative Mechanics
 
-Mechanic Interaction
-================
+### Mechanic Interaction
 * Some pretty complex gameplay can emerge from the interaction of very simple mechanics

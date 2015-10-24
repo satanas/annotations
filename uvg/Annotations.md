@@ -113,14 +113,17 @@ generated elements and the player choices
 
 ## Lesson 5: Story and Games
 
-Lesson 5 addresses how narrative functions in games, which is both similar and different to how it functions in movies or television.
+Lesson 5 addresses how narrative functions in games, which is both similar and different to how it functions in movies 
+or television.
 
 Games as interactive playful objects is not the only way to understand games. Videogames can be interpreted as stories.
 
 Why theorist focus on narrative:
 
-1. Stories are essential to understanding our past and our present
-2. Academics have developed pretty comprehensive frameworks for understanding these structures and significative stories. Critical tools adapted to interpret videogames (structuralism, post-structuralism, deconstructionism). They see a videogame like a text
+1. Stories are essential to understand our past and our present
+2. Academics have developed pretty comprehensive frameworks for understanding these structures and significative 
+stories. Critical tools adapted to interpret videogames (structuralism, post-structuralism, deconstructionism). They 
+see a videogame like a text
 3. Study videogames within institutions that may not see a videogame as an important object to study
 
 We study five important points in RPGs:
@@ -132,66 +135,96 @@ We study five important points in RPGs:
 
 We use three thing to help build up a narrative structure to help us understand stories in videogame:
 
-* Characters: namely the heroes (protagonists), villains (antagonists), and sidekicks (tritagonists) who act and make decisions in the story
-* Plot: namely the action that unfolds over time
-* Genre: namely the accepted style and setting in which the action takes place
+* **Characters**: namely the heroes (protagonists), villains (antagonists), and sidekicks (tritagonists) who act and make 
+decisions in the story
+* **Plot**: namely the action that unfolds over time
+* **Genre**: namely the accepted style and setting in which the action takes place
 
-* Narratology: Story based approach to understand games, they see story as essential to creating meaning from a game
+Narratology is story based approach to understand games, they see story as essential to creating meaning from a game.
 
-Character
-========
-* A story has a protagonist (a greek word that means the first contestant) and a antagonist (a greek word that means someone to one has to compete to) and sometimes a tritagonist that is a third person who sets between the hero and the villan, provides the writers with a handy and consistent mechanism for advancing the game's plot and theme.
+### Character
 
-Plot
-===
-Is the action that unfolds over time. A chronicle is a sequence of facts but plot implies design, causation and connections. Plot don't have to be expressed in complete linear fashion
+A story has a protagonist (a greek word that means the first contestant) and an antagonist (a greek word that means 
+someone to one has to compete to) and sometimes a tritagonist that is a third person who sets between the hero and the 
+villan, provides the writers with a handy and consistent mechanism for advancing the game's plot and theme.
 
-According to Gustav Freytag, plays has something called dramatic arc that is broke down into five separated but related acts.
-1. Exposition: The main characters are introduced and the protagonist is given his/her quest or motivation that will dirve him/her toward some goals
-2. Rising action: This is where the main objectives start to reveal and a series of small struggles start to impide those activities
-3. Climax: Where the main struggle comences. Usually includes a fight or a battle but could also include moral choice or a refusal to act.
-4. Falling action: almost all of the small struggles are resolved and the main struggle is completed. Often the villain reappears impeding the protagonist to win
-5. Denoument: Where everything is wrapped up neatly for the audience. Heroes are cheered, villains are punished, loyalty is rewarded and betrayers are cast out.
+### Plot
+
+Is the action that unfolds over time. A chronicle is a sequence of facts but plot implies design, causation and 
+connections. Plot don't have to be expressed in complete linear fashion.
+
+According to Gustav Freytag, plays has something called dramatic arc that is broke down into five separated but related 
+acts.
+1. **Exposition**: The main characters are introduced and the protagonist is given his/her quest or motivation that will 
+drive him/her toward some goals
+2. **Rising action**: This is where the main objectives start to reveal and a series of small struggles start to impede 
+those activities
+3. **Climax**: Where the main struggle commences. Usually includes a fight or a battle but could also include moral 
+choice or a refusal to act.
+4. **Falling action**: almost all of the small struggles are resolved and the main struggle is completed. Often the 
+villain reappears impeding the protagonist to win
+5. **Denoument**: Where everything is wrapped up neatly for the audience. Heroes are cheered, villains are punished, 
+loyalty is rewarded and betrayers are cast out.
 
 This curve (arc) is not perfectly symmetrical, sometimes is more like a jagger mountain.
 
-Genre
-=====
-Refers to a generally agreed upon style or set of conventions that people use to classify a medium. In all media, the viewer, reader or player uses their own experience and interpretation to understand what they are viewing or playing. Genre is particulary important for understanding stories with a hero on an epic journey.
+### Genre
 
-Monomyth
-========
-It's a metaphor for growing up, in psychological terms it describes a person's growth from youth innocence to adult experience. In narrative terms, the monomyth describes a hero overcoming obstacles and completing epic quests.
+Refers to a generally agreed upon style or set of conventions that people use to classify a medium. In all media, the 
+viewer, reader or player uses their own experience and interpretation to understand what they are viewing or playing. 
+Genre is particularly important for understanding stories with a hero on an epic journey.
+
+### Monomyth
+
+It's a metaphor for growing up, in psychological terms it describes a person's growth from youth innocence to adult 
+experience. In narrative terms, the monomyth describes a hero overcoming obstacles and completing epic quests.
 
 Campbell describes three broads stages of experience:
-A. The departure
+A. **The departure**
   1. The call to the adventure
   2. Refusal of the call: Often followed by a significant punishment
   3. Supernatural aid: Usually presented in the form of a wise old man giving a gift
   4. Crossing the first threshold: Is the first step into the unknown
-  5. The belly of the whale: The user is stripped of almost all of his/her companions. This step marks the end of the departure and the beginning of the initiation
+  5. The belly of the whale: The user is stripped of almost all of his/her companions. This step marks the end of the 
+  departure and the beginning of the initiation
 
-B. The initiation: here the player is stripped of all the things he/she knows and understand to experience some kind of rebirth and start a new life.
-  6. The road of trials: the user is in a new world that is a constant source of challenge and the player goes through all kind of physical, mental, emotional or psychological trials. In some games this phase is called leveling-up, gaining exp, etc. It serves as preparation for the final battle with the archenemy. According to Campbell, crossing the road of trials is the symbolic commitment to the journey, it's the limit between ordinary and extraordinary
-  7. Meeting with the Goddess: it's a brief respite on the journey where the character may recharge a little bit, usually under the figure of a mother or a true love. This goddess often gives a critical quest item.
-  8. The temptress: temptation that tries to pull the hero away from its original quest.
-  9. Atonement with the father: the hero has to realize his/her own identify, usually through the form of a confrontation with someone with lot of power in the figure of a father.
-  10. Apotheosis: accepting the loss the character gains a broader knowledge. the hero gains the wisdom to see him/herself in a new way, often the self is even scrificed in favor of the greater good
-  11. The ultimate boon: here is where the hero reconciles with the truth and give him/herself a renewed sense of balance and wisdom. With the ultimate boon the hero uses their knowledge to serve a greater purpose. This boon is usually mental or psychological 
+B. **The initiation**: here the player is stripped of all the things he/she knows and understand to experience some 
+kind of rebirth and start a new life.
+  6. The road of trials: the user is in a new world that is a constant source of challenge and the player goes 
+  through all kind of physical, mental, emotional or psychological trials. In some games this phase is called 
+  leveling-up, gaining exp, etc. It serves as preparation for the final battle with the archenemy. According to 
+  Campbell, crossing the road of trials is the symbolic commitment to the journey, it's the limit between ordinary and 
+  extraordinary
+  7. Meeting with the Goddess: it's a brief respite on the journey where the character may recharge a little bit, 
+  usually under the figure of a mother or a true love. This goddess often gives a critical quest item
+  8. The temptress: temptation that tries to pull the hero away from its original quest
+  9. Atonement with the father: the hero has to realize his/her own identify, usually through the form of a 
+  confrontation with someone with lot of power in the figure of a father
+  10. Apotheosis: accepting the loss the character gains a broader knowledge. The hero gains the wisdom to see 
+  him/herself in a new way, often the self is even sacrificed in favor of the greater good
+  11. The ultimate boon: here is where the hero reconciles with the truth and give him/herself a renewed sense of 
+  balance and wisdom. With the ultimate boon the hero uses their knowledge to serve a greater purpose. This boon is 
+  usually mental or psychological 
 
-C. The return
-  12. Refusal to return: Often is punished too or the hero simply can't return home given the arduousness of the trails.
+C. **The return**
+  12. Refusal to return: Often is punished too or the hero simply can't return home given the arduousness of the trails
   13. The magic flight: is the magical or supernatural aid that the player requires to escape
-  14. Rescue from without: in case the magic flight doesn't come up, the hero could back to his/her town with ny any other mean (magic wand, etc)
-  15. Crossing the return threshold: games that go beyond the previous point must face the mark of passing from darkness to light and been reborn into the world. Could imply fighting against a guardian and sometimes with words, not with weaponds
-  16. Master of two worlds: when the hero returns home is wiser, so he/she should be able to symbolically travel back and forth between home and the distant land
-  17. Freedom to live: when the hero accepts the reward for completing his/her journey and is given the freedom to live. It's more like a psychological stage, the hero can live in peace.
+  14. Rescue from without: in case the magic flight doesn't come up, the hero could back to his/her town with any 
+  other mean (magic wand, etc)
+  15. Crossing the return threshold: games that go beyond the previous point must face the mark of passing from 
+  darkness to light and been reborn into the world. Could imply fighting against a guardian and sometimes with words, 
+  not with weapons
+  16. Master of two worlds: when the hero returns home is wiser, so he/she should be able to symbolically travel back 
+  and forth between home and the distant land
+  17. Freedom to live: when the hero accepts the reward for completing his/her journey and is given the freedom to 
+  live. It's more like a psychological stage, the hero can live in peace.
 
 Criticism
 1. Male perspective oriented. Women have a supporting role
 2. To flexible and extensible, almost anything can be considered inside the paradigm
 3. When used as a prescripted recipe most stories will come up as predictable and cliché
 
-Branching Narrative
-===============
-Hypertext Fiction helped to set a standard to explore the non-linear narrative stories. Give to the player the ability to control the flow of the story. Games are stories, so narratologist use tools to analyze games.
+### Branching Narrative
+
+Hypertext Fiction helped to set a standard to explore the non-linear narrative stories. Give to the player the ability 
+to control the flow of the story. Games are stories, so narratologist use tools to analyze games.

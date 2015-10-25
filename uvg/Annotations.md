@@ -228,3 +228,50 @@ Criticism
 
 Hypertext Fiction helped to set a standard to explore the non-linear narrative stories. Give to the player the ability 
 to control the flow of the story. Games are stories, so narratologist use tools to analyze games.
+
+
+## Lesson 6: Interpreting Games
+
+Theory in humanities (and game studies) es a framework of abstract thought. Should help explain specify instances
+
+Structuralism
+==========
+Makes possible to take a game a break it down into its constituent elements and let us explore the relationship between game elements. Structuralists believe that examining the relationship between different human activities help us understand humanity as a whole. Structuralism attempts to interpret some aspect of the world or human culture using fixed categories into which the majority (if not all) features of the object of study fall
+
+Konzack approach
++++++++++++++++
+Konzack proposes seven layers that work as a bottom up approach for analysis. It starts at the microlevel and scale up to more experiential and social aspects.
++Hardware: It's the physical medium that the game is built and played on.
++Code: Computer program that makes up the software. All higher levels are based on these two substrates
++Functionality: Is the way that software interface allows the user to interact with the game
++Gameplay: is made up of the interconnected systems of space, time, rewards and punishments. All of them conform a game experience.
++Meaning: based on semiotics (the meaning of signs and symbols) and is made during the playing of a game
++Referentiality: represents the connections of the game meanings with other games and medias. References depend on a common language of genre and gameplay.
++Socio-culture: situates the player behavior in the cultural context that the player lives in.
+
+Post-structuralism
+==============
+For post-structuralists, language shape reality (train example in WoW), for example naming things. When you name things you can share it with other people and connect it to other things with names. Language is not a tool, it is something that we need to describe things and even to perceive them.
+
+Post-structuralism tries to overcome some of the limitations of structuralism. It explores the tension between the complex nature of human society and the need of fixed structures to analyze it.
+
+For Baudrillard, all are simulations within simulations within simulations. All our perceptions of reality are just nested hierarchies of simulation. Videogames have substituted the fidelity of the technology of the past with all other meaningful interpretations of the past. In post-structuralism language, videogames present a simulation of a reality that never existed in the first place, just simulated an idealized copy
+
+Games as Arguments
+=================
+
+Post-structuralist perspective misses out one of the most important elements of a game: interactivity. So how can be analized a videogame from the PS perspective?
+
+The procedure rhetoric perspective of Ian Bogost does that, analyzing the arguments a game makes through their mechanic and processes. It focuses on game rules, interactivity within those rules and linguistic system around those rules. It's all about rules and language.
+
+It's defined as the practice of using process persuasively, it's about arguments. Bogost give us a theory to understand how games make arguments.
+
+Procedures are the combination of rules and mechanics that make up gameplay. Rhetoric is the idea that language can be used to persuade people, in this case rules are a kind of language and they give structure to human activities, so when a player engages with the rules of a game, they are learning the meaning of the game.
+
+Procedural rhetoric is all about understanding how the game's rules and mechanics influence meaning, in other words, how procedures make arguments.
+
+Unit operations is the term used to break procedures into smaller elements (tiny processes). For Bogost, all meanings can be understood by the links of all these discrete units operation and all these tiny processes linked are known as a procedure and the link of all these procedures is known as a game.
+
+This means that there are two types of persuading processes: the tiny low-level unit operations and the larger systemic processes that emerge form those units.
+
+Procedural rhetoric however, has some limitations. Focusing on the rules and systems, less attention is paid to particular play styles or personal experiences. According Miguel Sicart, procedural rhetoric disregards the importance of play and players as activities that have creative, performative properties. Sicart says that the meaning of a game is more than its rules because the player interprets these rules, bend them and even break them, that's why for some critics of PR the player has a more important role on meaning making in games and "play" is the most important part of gameplay.

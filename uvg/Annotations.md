@@ -302,3 +302,67 @@ of play and players as activities that have creative, performative properties. S
 is more than its rules because the player interprets these rules, bend them and even break them, that's why for some 
 critics of PR the player has a more important role on meaning making in games and "play" is the most important part of 
 gameplay.
+
+
+## Lesson 7: Gaming Culture
+
+### The culture of FPS
+
+1. Culture is complex
+2. Language is fundamental to our understanding of culture
+3. Communities and how they influence the language
+4. Tool or how material culture shapes communities
+
+### Cultural language
+
+* Gamer is a complex word to use when talking of inclusivity (hardcore gamers vs casual gamers, for instance).
+* Semiotics (relationship between sign and symbols and the concept that we have in our brain)
+* Culture shape language and language shape culture
+* Hall says that people define meaning according their experiences and worldview
+
+### Language and comunnity
+
+* Language in video game history has been recent but in the 90's with internet there was an explosion.
+* Who belongs to a community and who doesn't depends on language. Internet is powerfull, make BF3 to put dinosaurs
+* Communities work by demarking membership by language
+* Arcade is a social place, USA and Europe don't have arcade since 2000 but Japan does. In Japan, games are designed 
+with the support of the publisher for arcades
+
+### Material culture
+
+Material culture is about using theory to examine what our stuff mean to us and maybe why we made them. Analizing 
+material artefacts and they cultural impact. Games are driven by marketing and collaboration (tie-in), it's part of the 
+game economy
+
+### Indies
+
+Emerged in response to the comercialization of games with few ideas a lot of secuels.
+
+Some are self-described as studios were the creative process is more important than the selling process. Others say 
+that having no investors, they can control in a better way the creation process and can adapt quickly to the user 
+expectation. And finally, other group say that the indies have access to the same tools and structures than the rest.
+
+Easter egg for credits in the 80's.
+
+Indies studios:
+* Operate on smaller budgets and have no shareholders
+* Tends to have smaller scale game in favor of original histories and game mechanics
+
+Indie movement creates its own means for publishing and marketing
+
+### Modding
+
+Involves altering the game to suite a particular goal in a way that the designer didn't intend. Also means altering the 
+hardware for aesthetics or performance. Game mods are software modifications (source code), performance or graphical 
+improvement, expanding content, etc. 
+
+* Total conversion: customize all aspects of the original game
+* Unofficial patches: fix bugs and gameplay issues that the original developers couldn't or hadn't the time
+* Modding imply two possible aspects: fixing bugs or discovering and adding content unfinished
+* Remake: the game mechanics usually stay intact but the graphics are improved (generally for older games). Art, game 
+engines, voices, sfx, etc.
+* Demake: take a new game and mod it to make it run in an old hardware
+* Cheat code: special codes that can be used by the player to transform the gameplay
+
+Teleological History of videogames: from the humble origins of rudimentary games programmed by individual to the huge 
+and perfect and realistic products made by large teams of artists and engineers.

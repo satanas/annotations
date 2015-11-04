@@ -366,3 +366,70 @@ engines, voices, sfx, etc.
 
 Teleological History of videogames: from the humble origins of rudimentary games programmed by individual to the huge 
 and perfect and realistic products made by large teams of artists and engineers.
+
+Lesson 8: Violence and Games
++++++++
+
+Violence and platformers
+===================
+First sign of violence was in early platformers. Examples: Donkey Kong, Pitfall Harry, Manic Miner. Moon Patrol introduced parallax. Platformers has power ups. Cinematic platfomers, focused on story.
+
+When a game requires a player to commit a violent act in order to progress, the game is using violence as a mechanic.
+
+Blood and Gore
+============
+There is a lot of graphics violence in videogames (but eyecandy). Blood and gore is related with art.
+
+In super meat biy, the blood trial adds a new style and narrative.
+Gory violence tends to give player visceral gut wrenching feelings or perphaps allows catarsis, allowing players to release deeply represed emotions.
+
+The spectrum of what is too violent is fluid and debatible and also dependes on each personal perspective.
+
+Consequences and morality
+=====================
+Games use feedback to keep the player engaged. Many games reward or punish the player for commiting violent acts. Ultima 3 punish you brutally if you attack NPC and Wizardry doesn't let you attack NPC at all. The term NPC first arose in table role playing games. Crusader: No Remorse let you attack and kill NPCs with almost no consequences.
+
+Consequences can be interpreted in many different ways.
+
+The issue of consequences from violent actions is neither about reward nor punishment, but moral choices.
+
+Fallout was one of the first in making moral choices explicit and long term, you see them once you finish the game but is more often to have immediate feedback. Dishonored rewards the player for find non-violent or non-lethal solutions, altering the end environment and giving less creature encounters.
+
+Within the right context, the player will think twice before commiting a violent act.
+
+Violence and mechanics
+===================
+Gating: some games confine the player into certain areas until they satisfy some conditions and for the most games, these conditions imply killing the pre-specified target
+
+Postal was banned because of the violence level. Here the player has to witness acts of violence but not always have to commit them. Even when the player is encourage to commit violence there is a pacifist alternative.
+
+Syndicated Wars requires the player use a weapon called Persuadetron.
+
+Ethical Harm: is eplxored in Wasteland when you kill the Bobby's dog. It puts the player in a moral quandary: What do you do when Bobby attacks you? Step back or shoot?
+
+Other games maniplate the player to commit violence acts against innocents, they use what is called: Unreliable Narrator. This narrator misleads the player into believing one thing when reality is much different
+
+Violence and aestethics
+==================
+Man Hunt has a photo realistic style, giving the player the option to kill the NPC in several ways according the level, the violence seems palpable.
+
+Cartoons make the violence less unrealistic. Violence is also relative to our cultural situation. The green blood in House of the Dead make it less realistic.
+
+Violence in a viodegame is not straightforward. There are complex relationship between a game's mechanic, its story, its characters and how the player experiences all these things together.
+
+Game violente research
+==================
+Claims of most of the studies about relationship between viodegame violence and real life violence:
+1. Exposure to game violence desensitizes players to real life violence
+2. Game violence makes to individials act more aggressive
+3. The more realistic the violence is the more likely the person is to experience vioñent thoughts
+
+Social learning theory: Argues that children imitate actions that they see in the media. The theory supports the points mentioned before. Psychologist and theorist have added that you reframe your thoughts and believes if you get exposed to violent actions.
+
+Violence in videogames has suffered from research methodological problems, using the inapproiate or wrong technices. "Monkey see, monkey do" violence theory.
+
+Undergraduate are often used as test subjects for these studies. Are they a representative sample of general population?
+
+Hot Sauce Program: Is another way to measure violence behavior. The experiment consist in asking someone to prepare a spicy sauce to other who doesn't like spice. If the user prepares a lot of spice then he/she is committing an aggressive act. This is donde with an annoying sound too. The criticism is that the sauce of the lodu sound is not representative of real violence.
+
+There are biases into how the publisher and researches tune their results.

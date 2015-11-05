@@ -433,3 +433,59 @@ Undergraduate are often used as test subjects for these studies. Are they a repr
 Hot Sauce Program: Is another way to measure violence behavior. The experiment consist in asking someone to prepare a spicy sauce to other who doesn't like spice. If the user prepares a lot of spice then he/she is committing an aggressive act. This is donde with an annoying sound too. The criticism is that the sauce of the lodu sound is not representative of real violence.
 
 There are biases into how the publisher and researches tune their results.
+
+
+
+Lesson 9: Sex and Games
++++++++
+
+Sexuality and Adventure Games
+=========================
+Adventure is one of the first genres in introduce sex and sexuality in videogames. Things from adventure games are seamless integrated in almost any other genre and they borrowed ideas from MUDs and table RPG. Inventories and inventory management becomes a critical gameplay element in most Adv games and how success was the player in solving puzzle.
+
+Adventure (the game): was text adventure game inspired by a cave layout in the US. Don Woods added story elements, puzzle, score, exploration, etc. This becomes in Colossal Cave Adventures.
+
+They became popular with the release of Zork at 1980.
+
+Mist broke every paradygm.
+
+This lession will focus in three things:
+1. Brief history of sex in gaming
+2. Five ways to imagine sex in gaming
+3. Role of women as designers in the industry
+
+Sex and Games
+============
+Atari's Gotcha features a fully clothes man chasing a woman wearing lingerie. Most early video designers assumed that theirs audience was male, single and heterosexual.
+
+Super Stud Adventure (then called Softporn Adventure) was designed to parody the sexual dilemmas of a young single man. The game challenged the player to sleep with a number of different women. The box cover art was controversial for having three topless female employee of Sierra Online Systems.
+
+Sex is related to our biology whilest gender is related to the sociocultural meaning of sex and its role in the community.
+
+A rape in cyber space, an article in the 90's that got out to the community. Night trap caused commotion in the congress of USA, prompted the creation of the ESRB to classify the content of videogames.
+
+In the 90's two main events happened:
+1. The release of Doom and the male domination of the FPS
+2. The launching of Myst, the number one game of adventures for almost a decade
+
+Representations of Sex
+==================
+There are many ways of represent sex in a video game:
+1. Sex as abstraction: game developers needs a conceptual mean to represent sex and sexuality (complex and concrete human activities) in a game. Abstraction works through simplification. Viva Pinata y The Marriage are good representations of abstractions in videogames. Sex as abstraction simplifies certain aspects of human sexuality in a rational and repeatable manner. Simultaneously, it represents much more complex and rich human experiences. Sex can be presented in non threatening ways and also creates space for complex interpretation.
+
+2. Sex as game goal: A way to motivate the player to progress through the game using sex. Strip poker uses the nudity as abstraction. The Male Gaze (by Laura Mulvey) is a blend of feminism, film theory and psycoanalysis that analyzes the objectificaiton of women in cinema:
+ a) Film can represent people on screen as objects of  sexual gratification
+ b) The viewer receives pleasure by narcistical feel represented by someone in the film
+The women are passive object used to gratificate the active viewers
+
+3. Sex as mechanic: The objects in The Sims doesn't differentiate between character sex. In RPG female characters were given pts of dexterety while males pts of strengh. In Mario 2 each character has different mechanics. Good innovative games try to break the traditional stereotypes creating a sense of agency on the player.
+
+4. Sex as aesthetic: some games include sexuality through implicit reference, leaving the details to the player's imagination while other games explicit represent sexuality. Heteronormative, is a specfici representation of gender and sexuality. Is the assumption that there are specific roles, relationships and identities normal to men and women.
+
+5. Sex as emergent gameplay: Marriage ceremony as emergent play. In games like Second Life, player sell a variety of sexual services, other sell 3D sex toys to the player, etc. Many players use this virtual reality to express behaviors prohibited in the real world.
+
+Roles of Women in Games and the Industry
+=================================
+45% of players are women but only 11% make videogames and 4% only works in audio and engineering jobs
+16% in design
+11% in game design

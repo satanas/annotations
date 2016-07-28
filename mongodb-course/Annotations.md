@@ -372,3 +372,9 @@ put that record
   * Avoid shard keys that increase monotonically (like _ids) because this creates hotspots and unbalance the shard
   * A key that gives you high parallelism is a good choice for shard key
 * You can't choose an array as shard key because it needs a multi key index
+
+TIPS:
+## Connect to remote database
+```
+mongo somewhere.com:27001/my_database -u username -p password
+```
